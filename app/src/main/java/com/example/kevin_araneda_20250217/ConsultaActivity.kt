@@ -33,11 +33,11 @@ class ConsultaActivity : AppCompatActivity() {
 
         if (cursor.moveToFirst()) {
             do {
-                val rut = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COLUMN_RUT))
-                val nombre = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COLUMN_NOMBRE))
-                val apellido = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COLUMN_APELLIDO))
-                val fecha = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COLUMN_FECHA))
-                val hora = cursor.getString(cursor.getColumnIndex(DatabaseHelper.COLUMN_HORA))
+                val rut = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_RUT))
+                val nombre = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_NOMBRE))
+                val apellido = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_APELLIDO))
+                val fecha = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_FECHA))
+                val hora = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.COLUMN_HORA))
 
                 usuarios.add(Usuario(rut, nombre, apellido, fecha, hora))
             } while (cursor.moveToNext())
@@ -45,4 +45,5 @@ class ConsultaActivity : AppCompatActivity() {
         cursor.close()
         return usuarios
     }
+
 }
