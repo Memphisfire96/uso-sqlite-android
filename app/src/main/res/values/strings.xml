@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">kevin_araneda_20250217</string>
+    <string name="Registro">Registro Datos</string>
+    <string name="Rut">Ingresa tu RUT:</string>
+    <string name="Nombre">Escribe tu nombre:</string>
+    <string name="Apellido">Escribe tu apellido:</string>
+    <string name="Fecha">Selecciona la fecha</string>
+    <string name="Hora">Muestra la hora</string>
+    <string name="Boton">Registrar datos</string>
+    <string name="boton2">Consultar Datos</string>
+
+
+
+</resources>
